@@ -16,7 +16,7 @@ class ShortURLController extends Controller
     {
         $bulider = new \AshAllenDesign\ShortURL\Classes\Builder();
         $shortURLObj = $bulider->destinationUrl(request()->url)->make();
-        $shortURL = $shortURLObj->default_short_url;
+        $shortURL = $shortURLObj->default_short_url; 
         return back()->with("success","URL shortened Successfully");
     }
 }
